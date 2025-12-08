@@ -10,15 +10,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: Text('FLutter Demo'),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Melaverse'),
-        ),
-        body: Container(
-          
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal)),
+      title: 'FLutter Demo',
+      home: Scaffold(),
     );
   }
 }
