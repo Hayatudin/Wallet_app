@@ -17,32 +17,10 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter Demo Home Page', style: TextStyle(color: Colors.white)),
           backgroundColor: Colors.deepPurple,
         ),
-        body: Center(
-          child: Container(
-            color: Colors.yellow,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  width: 100.0,
-                  height: 100.0,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.green),
-                  child: Center(
-                    child: Text('Hello World', style: TextStyle(color: Colors.white)),
-                  ),
-                ),
-                Container(
-                  width: 100.0,
-                  height: 100.0,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.green),
-                  child: Center(
-                    child: Text('Hello World', style: TextStyle(color: Colors.white)),
-                  ),
-                ),
-              ],
-            ),
-          ),
+        body: Image.network(
+          'https://img.freepik.com/free-photo/anime-style-character-with-fire-flames_23-2151152391.jpg?t=st=1765224148~exp=1765227748~hmac=69c5e701cdea635adab261addc4a407ea97df1b026a8d8f019b34f81e85f6a57&w=740',
+          height: double.infinity,
+          fit: BoxFit.cover,
         ),
       ),
     );
