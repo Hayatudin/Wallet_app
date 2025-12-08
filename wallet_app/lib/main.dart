@@ -18,7 +18,31 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.deepPurple,
         ),
         body: Center(
-          child: Container(width: double.infinity, height: double.infinity, color: Colors.green),
+          child: Container(
+            color: Colors.yellow,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.green),
+                  child: Center(
+                    child: Text('Hello World', style: TextStyle(color: Colors.white)),
+                  ),
+                ),
+                Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.green),
+                  child: Center(
+                    child: Text('Hello World', style: TextStyle(color: Colors.white)),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
