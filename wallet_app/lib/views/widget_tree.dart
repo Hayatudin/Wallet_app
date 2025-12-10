@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wallet_app/data/notifiers.dart';
 import 'package:wallet_app/views/pages/home_page.dart';
 import 'package:wallet_app/views/pages/profile_page.dart';
+import 'package:wallet_app/views/pages/settings_page.dart';
 import 'package:wallet_app/views/widgets/navbar_widget.dart';
 
 List<Widget> pages = [HomePage(), ProfilePage()];
@@ -26,6 +27,19 @@ class WidgetTree extends StatelessWidget {
                 return Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode);
               },
             ),
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SettingsPage(title: 'Settings');
+                  },
+                ),
+              );
+            },
+            icon: Icon(Icons.settings),
           ),
         ],
       ),
