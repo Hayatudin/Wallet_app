@@ -23,6 +23,19 @@ class _SettingsPageState extends State<SettingsPage> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
+              ElevatedButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('You have successfully loggedin!'),
+                      duration: Duration(seconds: 5),
+                      behavior: SnackBarBehavior.floating,
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.teal),
+                child: Text('OPen SnackBar', style: TextStyle(color: Colors.white)),
+              ),
               TextField(
                 controller: controller,
                 decoration: InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
@@ -56,6 +69,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   });
                 },
               ),
+              Divider(),
               Slider(
                 value: sliderValue,
                 onChanged: (value) {
