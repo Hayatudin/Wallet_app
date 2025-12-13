@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 // import 'package:wallet_app/views/pages/home_page.dart';
 import 'package:wallet_app/views/widget_tree.dart';
 import 'package:wallet_app/views/widgets/hero_widget.dart';
@@ -12,7 +13,7 @@ class WelcomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          HeroWidget(),
+          Lottie.asset('assets/lotties/card.json'),
           SizedBox(height: 20.0),
           FilledButton(
             onPressed: () {
