@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-// import 'package:wallet_app/views/pages/home_page.dart';
 import 'package:wallet_app/views/widget_tree.dart';
-import 'package:wallet_app/views/widgets/hero_widget.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -13,8 +10,8 @@ class WelcomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Lottie.asset('assets/lotties/card.json'),
-          SizedBox(height: 20.0),
+          Center(child: Image.asset('assets/images/huluFix.png', width: 200.0, height: 200.0)),
+          Text('HULUFIX', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
           FilledButton(
             onPressed: () {
               Navigator.pushReplacement(
@@ -26,7 +23,7 @@ class WelcomePage extends StatelessWidget {
                 ),
               );
             },
-            child: Text('Login'),
+            child: Text('Get Started'),
           ),
         ],
       ),

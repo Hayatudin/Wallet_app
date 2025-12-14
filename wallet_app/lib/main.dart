@@ -9,6 +9,8 @@ void main() {
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
@@ -21,13 +23,7 @@ class _MyAppState extends State<MyApp> {
       builder: (context, isDarkMode, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.teal,
-              brightness: isDarkMode ? Brightness.dark : Brightness.light,
-            ),
-          ),
+          theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal)),
           home: WelcomePage(),
         );
       },
